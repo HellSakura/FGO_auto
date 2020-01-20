@@ -2,6 +2,7 @@
 ~~迫于无限池刷的过于精污，又想同时看番剧~~  
 ~~初学者预警~~  
 本脚本请直接在按键精灵新建脚本，粘贴，修改后保存即可使用  
+[点击查看](./WCBA循环刷图)
 ***
 运行原理
 ------
@@ -15,13 +16,13 @@
 `MoveTo 940, 231//关卡入口点击`
 此处`940, 231`改为你的关卡入口坐标  ⚠️`940,`后有空格  
 坐标获取可以使用按键精灵自带的抓抓功能  
-![](https://github.com/HellSakura/FGO_auto/blob/master/images/tools.png)  
+![](./images/tools.png)  
 在`FindPic 314,118,529,561,"Attachment:\金苹果.bmp",0.9,intA,intB`中  
 `314,118,529,561`指的是查找图片的区域，此处指金苹果的图片  
 `0.9`指图片的相似度，请根据体感自行调整  
 `Attachment:\金苹果.bmp`指需要查找的图片路径，这里将图片放在了按键精灵自带的附件功能里  
-![](https://github.com/HellSakura/FGO_auto/blob/master/images/findpic.png)
-![](https://github.com/HellSakura/FGO_auto/blob/master/images/attachments.png)  
+![](./images/findpic.png)
+![](./images/attachments.png)  
 随意查找一个区域，生成脚本示例为  
 ```
 FindPic 575,278,755,364,"Attachment:\金苹果.bmp",0.9,intX,intY
