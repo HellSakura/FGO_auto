@@ -1,0 +1,41 @@
+MoveTo 940, 231//关卡入口点击
+LeftClick 1
+Delay 2000
+Call 体力检测() //执行当前体力检测
+Sub 体力检测()
+    FindPic 314,118,529,561,"Attachment:\金苹果.bmp",0.9,intA,intB //查找指定区域是否有金苹果选项,灵敏度设置
+    If intA> 0 And intB> 0 Then //有金苹果选项进行体力补充
+        MoveTo intA + 20, intB + 20 //金苹果坐标位置(图片查找默认点击为左上角坐标，加入数值进行变更)
+        Delay 1000
+        LeftClick 1
+        MoveTo 835, 538 //确认框位置
+        Delay 1000
+        LeftClick 1
+        Delay 3000
+        Call CBA助战()
+    Else 
+        Call CBA助战()
+    End If 
+End Sub
+Sub CBA助战()
+    While i = 0 //定义变量i,i=0时无限循环
+        FindPic 168,213,361,668,"Attachment:\CBA.bmp",0.7,intX,intY //查找指定区域CBA头像,灵敏度设置
+        If intX > 0 And intY > 0 Then 
+            i = 1 //i=1时停止循环，进行点击
+            MoveTo intX+50, intY+50 //图片查找默认点击为左上角坐标，加入数值使其点击中心50
+            Delay 500
+            LeftClick 1 
+        Else //i≠1时
+            MoveTo 941, 345
+            Delay 1000
+            MouseWheel -1 //鼠标滚轮一次（向下）
+            Delay 1000
+        End If
+    Wend
+End Sub
+Delay 1000
+i = 0 //变量重置,防止循环运行时跳过找图
+//开始执行进图操作 此处可进行替换为录制脚本的信息
+//此处可进行替换为录制脚本的信息
+//战斗结束
+Delay 15000 //延迟15秒执行循环，跑芙芙
